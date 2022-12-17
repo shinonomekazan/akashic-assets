@@ -12,7 +12,12 @@ RPG等に利用される、ドット絵のキャラクター画像です。
 
 ### 魔女
 
-![魔女](./character2.png)
+![魔女A](./character2.png)
+![魔女B](./character9.png)
+
+### 村人
+
+![村人A](./character10.png)
 
 ### 犬
 
@@ -21,3 +26,4 @@ RPG等に利用される、ドット絵のキャラクター画像です。
 ![つめたい犬](./character5.png)
 ![かがやく犬](./character6.png)
 ![スペース犬](./character7.png)
+![野犬](./character8.png)
