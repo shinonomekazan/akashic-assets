@@ -27,3 +27,7 @@ RPG等に利用される、ドット絵のキャラクター画像です。
 ![かがやく犬](./character6.png)
 ![スペース犬](./character7.png)
 ![野犬](./character8.png)
+
+### スライム
+
+![スライム](./slime.png)
