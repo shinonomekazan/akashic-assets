@@ -21,3 +21,17 @@
 ### 学校・廊下・夜
 
 ![学校・廊下・夜](./jpg/school03.jpg)
+
+## 住宅街
+
+### 住宅街・昼
+
+![住宅街・昼](./jpg/residential_area01.jpg)
+
+### 住宅街・夕方
+
+![住宅街・夕方](./jpg/residential_area02.jpg)
+
+### 住宅街・夜
+
+![住宅街・夜](./jpg/residential_area03.jpg)
