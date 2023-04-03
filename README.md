@@ -20,6 +20,7 @@ Akashic Engine向けではありますが、特に利用に制限はないので
 - [背景](./bg/README.md)
 - [キャラクター](./characters/README.md)
 - [マップチップ](./chips/README.md)
+- [敵グラフィック](./enemies/README.md)
 - [ボタン](./buttons/README.md)
 - [汎用素材](./common/README.md)
 
@@ -29,4 +30,4 @@ Akashic Engine向けではありますが、特に利用に制限はないので
 |----|----|----|
 |[株式会社東雲火山](https://shinonomekazan.com/)|本Repository全体のスポンサーです。[汎用素材](./common)、[シルエット](./silhouette)、[背景](./bg/)等を作成しています||
 |本間|[キャラクター](./characters/)、[マップチップ](./chips/)、[ボタン](./buttons/)等を作成しています||
-|[BobTheColored / カラフルなボブ](https://bobthecolored.studio.site/Home)|[キャラクター](./characters/)の[スライム](./characters/slime.png)等を作成しています||
+|[BobTheColored / カラフルなボブ](https://bobthecolored.studio.site/Home)|[キャラクター](./characters/)の[スライム](./characters/slime.png)や合成素材等を作成しています||
