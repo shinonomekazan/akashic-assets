@@ -1,0 +1,14 @@
+{
+  "name": "gif-to-sprite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tsugehara <tsugehara@gmail.com> (https://github.com/tsugehara)",
+  "license": "MIT",
+  "dependencies": {
+    "imagescript": "^1.2.9"
+  }
+}
