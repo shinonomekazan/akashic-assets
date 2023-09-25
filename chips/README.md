@@ -50,6 +50,22 @@ WOLF RPGエディター仕様のオートタイル画像です。
 - ![赤宝箱](./treasures/takarabako_red.png)
 - ![青宝箱](./treasures/takarabako_blue.png)
 
+## エフェクト
+
+魔法等で利用するエフェクトです。
+
+フレームスプライトの形式になっているため、Akashic Engineでは、g.FrameSpriteを利用して再生することができます。
+
+- ![炎1](./effects/meramera.png)
+- ![炎2](./effects/gougou.png)
+- ![氷](./effects/hiyahiya.png)
+- ![光](./effects/kirakira.png)
+- ![魔法陣](./effects/MagicCircle.png)
+- ![煙1](./effects/mokumokku1.png)
+- ![煙2](./effects/mokumokku2.png)
+- ![雪だるま](./effects/snowman.png)
+
+
 ## 画像の合成について
 
 画像の合成は色々ツールがありますが、JavaScriptだけでやるなら[spritesmith](https://www.npmjs.com/package/spritesmith)の利用が便利です。
