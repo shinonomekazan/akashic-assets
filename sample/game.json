@@ -1,0 +1,106 @@
+{
+	"width": 480,
+	"height": 480,
+	"fps": 30,
+	"main": "./script/bundle.js",
+	"assets": {
+		"bundle": {
+			"type": "script",
+			"path": "script/bundle.js",
+			"global": true
+		},
+		"asset:c0a1f9": {
+			"type": "image",
+			"width": 102,
+			"height": 34,
+			"path": "assets/parts/buttons.png"
+		},
+		"assets/autotile1.png": {
+			"type": "image",
+			"path": "assets/autotile1.png",
+			"width": 32,
+			"height": 160
+		},
+		"assets/buttons/btn_blue1.png": {
+			"type": "image",
+			"path": "assets/buttons/btn_blue1.png",
+			"width": 96,
+			"height": 32
+		},
+		"assets/buttons/btn_blue2.png": {
+			"type": "image",
+			"path": "assets/buttons/btn_blue2.png",
+			"width": 96,
+			"height": 32
+		},
+		"assets/buttons/btn_green1.png": {
+			"type": "image",
+			"path": "assets/buttons/btn_green1.png",
+			"width": 96,
+			"height": 32
+		},
+		"assets/buttons/btn_green2.png": {
+			"type": "image",
+			"path": "assets/buttons/btn_green2.png",
+			"width": 96,
+			"height": 32
+		},
+		"assets/buttons/btn_red1.png": {
+			"type": "image",
+			"path": "assets/buttons/btn_red1.png",
+			"width": 96,
+			"height": 32
+		},
+		"assets/buttons/btn_red2.png": {
+			"type": "image",
+			"path": "assets/buttons/btn_red2.png",
+			"width": 96,
+			"height": 32
+		},
+		"assets/characters/character1.png": {
+			"type": "image",
+			"path": "assets/characters/character1.png",
+			"width": 96,
+			"height": 128
+		},
+		"assets/doors/door-gold.png": {
+			"type": "image",
+			"path": "assets/doors/door-gold.png",
+			"width": 96,
+			"height": 32
+		},
+		"assets/doors/door-wood.png": {
+			"type": "image",
+			"path": "assets/doors/door-wood.png",
+			"width": 96,
+			"height": 32
+		},
+		"assets/treasures/takarabako_blue.png": {
+			"type": "image",
+			"path": "assets/treasures/takarabako_blue.png",
+			"width": 128,
+			"height": 32
+		},
+		"assets/treasures/takarabako_red.png": {
+			"type": "image",
+			"path": "assets/treasures/takarabako_red.png",
+			"width": 128,
+			"height": 32
+		},
+		"assets/tile/tile.png": {
+			"type": "image",
+			"path": "assets/tile/tile.png",
+			"width": 64,
+			"height": 32
+		}
+	},
+	"moduleMainScripts": {},
+	"environment": {
+		"sandbox-runtime": "3",
+		"akashic-runtime": {
+			"version": "~3.0.19",
+			"flavor": "-canvas"
+		}
+	},
+	"globalScripts": []
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>合成か器</title>
+	</head>
+	<body>
+		<div>
+			<canvas id="canvas" width="96" height="128"></canvas>
+		</div>
+		<script>
+const 素材群 = [];
+素材群.push([
+	"-",
+	"./素体/人間素体_両性1.png",
+	"./素体/人間素体_両性2.png",
+	"./素体/人間素体_両性3.png",
+	"./素体/人間素体_女性1.png",
+	"./素体/人間素体_女性2.png",
+	"./素体/人間素体_女性3.png",
+	"./素体/人間素体_男性1.png",
+	"./素体/人間素体_男性2.png",
+	"./素体/人間素体_男性3.png",
+	"./素体/村人素体_シート.png",
+], [
+	"-",
+	"./顔/顔パーツタイプ1_1.png",
+	"./顔/顔パーツタイプ1_10.png",
+	"./顔/顔パーツタイプ1_11.png",
+	"./顔/顔パーツタイプ1_2.png",
+	"./顔/顔パーツタイプ1_3.png",
+	"./顔/顔パーツタイプ1_4.png",
+	"./顔/顔パーツタイプ1_5.png",
+	"./顔/顔パーツタイプ1_6.png",
+	"./顔/顔パーツタイプ1_7.png",
+	"./顔/顔パーツタイプ1_8.png",
+	"./顔/顔パーツタイプ1_9.png",
+	"./顔/顔パーツタイプ2_1.png",
+	"./顔/顔パーツタイプ2_10.png",
+	"./顔/顔パーツタイプ2_11.png",
+	"./顔/顔パーツタイプ2_2.png",
+	"./顔/顔パーツタイプ2_3.png",
+	"./顔/顔パーツタイプ2_4.png",
+	"./顔/顔パーツタイプ2_5.png",
+	"./顔/顔パーツタイプ2_6.png",
+	"./顔/顔パーツタイプ2_7.png",
+	"./顔/顔パーツタイプ2_8.png",
+	"./顔/顔パーツタイプ2_9.png",
+	"./顔/顔パーツタイプ3_1.png",
+	"./顔/顔パーツタイプ3_10.png",
+	"./顔/顔パーツタイプ3_11.png",
+	"./顔/顔パーツタイプ3_2.png",
+	"./顔/顔パーツタイプ3_3.png",
+	"./顔/顔パーツタイプ3_4.png",
+	"./顔/顔パーツタイプ3_5.png",
+	"./顔/顔パーツタイプ3_6.png",
+	"./顔/顔パーツタイプ3_7.png",
+	"./顔/顔パーツタイプ3_8.png",
+	"./顔/顔パーツタイプ3_9.png",
+], [
+	"-",
+	"./髪/髪1_短髪.png",
+	"./髪/髪2_短髪.png",
+	"./髪/髪3_短髪.png",
+	"./髪/髪4_長髪.png",
+	"./髪/髪5_長髪.png",
+], [
+	"-",
+	"./服/服1_兵士.png",
+	"./服/服2_兵士.png",
+	"./服/服3_魔法使い.png",
+	"./服/服4_魔法使い.png",
+], [
+	"-",
+	"./帽子/帽子1_兵士.png",
+	"./帽子/帽子2_兵士.png",
+	"./帽子/帽子3_魔法使い.png",
+	"./帽子/帽子4_魔法使い.png",
+]);
+const canvas = document.querySelector("canvas");
+function handleChange() {
+	const indexes = Array.from(document.querySelectorAll("select")).map((select) => select.selectedIndex - 1);
+	const context = canvas.getContext("2d");
+	context.clearRect(0, 0, canvas.width, canvas.height);
+	indexes.forEach((imageIndex, groupIndex) => {
+		if (imageIndex < 0) return;
+		context.drawImage(image群[groupIndex][imageIndex], 0, 0);
+	});
+}
+const image群 = [];
+素材群.forEach((素材s, index) => {
+	const images = [];
+	image群.push(images);
+	const select = document.createElement("select");
+	select.size = 8;
+	select.id = `asset${index}`;
+	select.dataset.index = index;
+	素材s.forEach((素材) => {
+		const option = document.createElement("option");
+		option.value = 素材;
+		option.textContent = 素材.split("/").slice(-1);
+		select.appendChild(option);
+		if (素材 !== "-") {
+			const image = new Image();
+			image.src = 素材;
+			images.push(image);
+		}
+	});
+	document.body.appendChild(select);
+	select.addEventListener("change", () => {
+		handleChange();
+	});
+});
+
+		</script>
+	</body>
+</html>

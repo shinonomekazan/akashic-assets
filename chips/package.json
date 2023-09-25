@@ -1,0 +1,17 @@
+{
+  "name": "@akashic-assets/chips",
+  "version": "0.1.0",
+  "description": "RPG等に利用される、マップチップ用の画像です。",
+  "main": "index.js",
+  "scripts": {
+    "generate": "ts-node generate.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tsugehara <tsugehara@gmail.com> (https://github.com/tsugehara)",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.7.18",
+    "spritesmith": "^3.4.0",
+    "ts-node": "^10.9.1"
+  }
+}

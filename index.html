@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		div.btnContainer {
+			display: inline-block;
+			position: relative;
+			width: 400px;
+			height: 120px;
+		}
+
+		canvas {
+			position: absolute;
+			bottom: 0px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div id="buttons">
+	</div>
+</body>
+<script>
+	(function () {
+		const buttonCanvas = [];
+		const buttonPushed = [];
+		const buttonsDiv = document.getElementById("buttons");
+		const images = [];
+		const imageNum = 15;
+		function imagePreLoad() {
+			for (let i = 0; i < imageNum; i++) {
+				const imageOffOn = [];
+				for (let j = 0; j < 2; j++) {
+					imageOffOn[j] = new Image();
+					const pushed = (j === 0) ? "off" : "on";
+					const img = `Buttons-main/btn${i + 1}${pushed}.png`;
+					imageOffOn[j].src = img;
+				}
+				images.push(imageOffOn);
+			}
+		}
+		function buttonInit() {
+			for (let i = 0; i < imageNum; i++) {
+				const btnDiv = document.createElement("div");
+				const newCanvas = document.createElement("canvas");
+				btnDiv.className = "btnContainer";
+				btnDiv.appendChild(newCanvas);
+				buttonsDiv.appendChild(btnDiv);
+				buttonCanvas.push(newCanvas);
+				buttonPushed.push(false);
+			}
+		}
+		function createMiddleBtn(num) {
+			const newCanvas = buttonCanvas[num];
+			const ctx = newCanvas.getContext('2d');
+			pushed = buttonPushed[num] === true ? 1 : 0;
+			const imageW = images[num][pushed].width;
+			const imageH = images[num][pushed].height;
+			newCanvas.width = imageW;
+			newCanvas.height = imageH;
+			const x = newCanvas.width / 2 - imageW / 2;
+			const y = newCanvas.height - imageH;
+			ctx.drawImage(images[num][pushed], x, y, imageW, imageH);
+			const fontWeight = 25;
+			ctx.font = `${fontWeight}pt Gothic`;
+			ctx.fillStyle = 'rgba(255, 255, 255)';
+			ctx.textAlign = "center";
+			let textY = newCanvas.height - imageH + images[num][1].height / 2 + fontWeight / 2;
+			const pushDepth = 7;
+			if (num === 6 || num === 7 || num === 8) textY -= 3;//文字表示の座標を微調整
+			if (pushed === 1 && (num === 12 || num === 13 || num === 14)) textY += pushDepth;//へこみボタンを押したときの文字の移動
+			ctx.fillText('ボタン', newCanvas.width / 2, textY);
+		}
+		function dispButtons() {
+			buttonCanvases = document.getElementsByTagName("canvas");
+			for (let i = 0; i < buttonCanvases.length; i++) {
+				const pushed = (buttonPushed[i] !== true) ? 0 : 1;
+				images[i][pushed].onload = function () {
+					createMiddleBtn(i, pushed);
+				}
+			}
+		}
+		function clickEvent(num, pushed) {
+			buttonPushed[num] = pushed;
+			createMiddleBtn(num, pushed);
+		}
+		function clickEvents() {
+			buttonCanvases = document.getElementsByTagName("canvas");
+			for (let i = 0; i < imageNum; i++) {
+				window.addEventListener('mouseup', function () {
+					if (buttonPushed[i] === true) {
+						clickEvent(i, false);
+					}
+				});
+				window.addEventListener('touchend', function () {
+					if (buttonPushed[i] === true) {
+						clickEvent(i, false);
+					}
+				});
+				buttonCanvases[i].addEventListener('mousedown', function () {
+					clickEvent(i, true);
+				});
+				buttonCanvases[i].addEventListener('touchstart', function () {
+					clickEvent(i, true);
+				});
+			}
+		}
+		new Promise((resolve) => {
+			imagePreLoad();
+			resolve();
+		}).then(() => {
+			buttonInit();
+			dispButtons();
+			clickEvents();
+		});
+	})();
+</script>
+
+</html>

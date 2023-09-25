@@ -1,0 +1,16 @@
+export const AssetPaths = [
+	"/assets/autotile1.png",
+	"/assets/parts/buttons.png",
+	"/assets/doors/door-wood.png",
+	"/assets/doors/door-gold.png",
+	"/assets/treasures/takarabako_red.png",
+	"/assets/treasures/takarabako_blue.png",
+	"/assets/tile/tile.png",
+	"/assets/buttons/btn_red1.png",
+	"/assets/buttons/btn_blue1.png",
+	"/assets/buttons/btn_green1.png",
+	"/assets/buttons/btn_blue2.png",
+	"/assets/buttons/btn_green2.png",
+	"/assets/buttons/btn_red2.png",
+	"/assets/characters/character1.png",
+];
