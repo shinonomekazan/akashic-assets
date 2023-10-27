@@ -1,0 +1,14 @@
+* {
+	font-family: "DotGothic16", sans-serif;
+}
+a.nav-link.content_link {
+	color: white;
+	background-color: #1d1d1d;
+	width: 10rem;
+	text-align: center;
+}
+a.nav-link.content_link.active {
+	border: solid 1px #fff;
+	color: black;
+	background-color: #8bfa1a;
+}
