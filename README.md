@@ -23,7 +23,8 @@ Akashic Engine向けではありますが、特に利用に制限はないので
 - [敵グラフィック](./enemies/README.md)
 - [ボタン](./buttons/README.md)
 - [汎用素材](./common/README.md)
-- [音素材](./audio/README.md)
+- [BGM素材](./audio/bgm/README.md)
+- [SE素材](./audio/se/README.md)
 
 ## 各素材の制作者
 
