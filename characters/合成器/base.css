@@ -1,0 +1,210 @@
+* {
+	font-family: "DotGothic16", sans-serif;
+}
+body {
+	background-color: #1d1d1d !important;
+}
+/*header*/
+.header_container {
+	color: #fff;
+	height: 60px;
+	margin: 16px 50px;
+}
+.header_logo {
+	display: inline-block;
+}
+.right_header {
+	float: right;
+}
+.guide_button {
+	height: 30px;
+	width: 30px;
+	background-image: url(../img/hatena.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.modal-content.guide_modal_content {
+	background-color: #1d1d1d;
+	border-radius: 0px;
+}
+.modal-header.guide_modal-header,
+.modal-footer.guide_modal-footer {
+	border: none;
+}
+.btn-close.button_close {
+	background-image: url(../img/close.png);
+	background-repeat: no-repeat;
+	width: 32px;
+	height: 32px;
+	opacity: 1;
+	box-sizing: revert;
+}
+/*canvas*/
+.canvas_container {
+	display: block;
+	margin: 0 auto;
+	background-image: url(../img/canvas.png);
+	background-size: cover;
+}
+
+/*tabUI*/
+.tab_container {
+	margin: 0 auto;
+	width: 716px;
+	display: block;
+}
+a.nav-link.content_link {
+	color: white;
+	border-bottom: solid 1px #fff;
+	background-color: #1d1d1d;
+	background-image: url(../img/tab_frame.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 140px;
+	height: 40px;
+	text-align: center;
+}
+a.nav-link.content_link.active {
+	color: black;
+	background-image: url(../img/tab_frame_active.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: transparent;
+	border: none;
+}
+a.nav-link.content_link:hover {
+	color: #8bfa1a;
+	border: none;
+	background-image: url(../img/tab_frame_hover.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+a.nav-link.content_link.body::before {
+	content: "";
+	height: 23px;
+	width: 20px;
+	background-image: url(../img/body.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: inline-block;
+	background-position: center;
+	vertical-align: bottom;
+	margin-right: 10px;
+}
+a.nav-link.content_link.face::before {
+	content: "";
+	height: 22px;
+	width: 22px;
+	background-image: url(../img/face.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: inline-block;
+	background-position: center;
+	vertical-align: bottom;
+	margin-right: 10px;
+}
+a.nav-link.content_link.face::before {
+	content: "";
+	height: 22px;
+	width: 22px;
+	background-image: url(../img/face.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: inline-block;
+	background-position: center;
+	vertical-align: bottom;
+	margin-right: 10px;
+}
+a.nav-link.content_link.face::before {
+	content: "";
+	height: 22px;
+	width: 22px;
+	background-image: url(../img/face.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: inline-block;
+	background-position: center;
+	vertical-align: bottom;
+	margin-right: 10px;
+}
+a.nav-link.content_link.hat::before {
+	content: "";
+	height: 10px;
+	width: 22px;
+	background-image: url(../img/hat.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: inline-block;
+	background-position: center;
+	vertical-align: bottom;
+	margin-right: 10px;
+}
+.nav_space {
+	margin-right: 4px;
+}
+.tab-content {
+	width: 716px;
+	height: 300px;
+	border: solid 1px #fff;
+	border-top: none;
+}
+
+/*button*/
+.preview_button {
+	width: 160px;
+	height: 40px;
+	border: none;
+	color: #fff;
+	background-color: #1d1d1d;
+	display: block;
+	margin: 0 auto;
+	background-image: url(../img/button01.png);
+	background-size: cover;
+}
+.preview_button:hover,
+.download_button:hover {
+	color: #1d1d1d;
+	background-image: url(../img/button03.png);
+}
+.bottom_button_container {
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 72px;
+}
+.reset_button {
+	width: 160px;
+	height: 40px;
+	color: #1d1d1d;
+	border: none;
+	background-image: url(../img/button02.png);
+	background-size: cover;
+	background-color: #1d1d1d;
+	display: inline-block;
+}
+.reset_button:hover {
+	color: #f0bf19;
+	background-image: url(../img/button04.png);
+}
+.download_button {
+	width: 160px;
+	height: 40px;
+	color: #fff;
+	border: none;
+	background-image: url(../img/button01.png);
+	background-size: cover;
+	background-color: #1d1d1d;
+	display: inline-block;
+}
+
+/*SP*/
+@media screen and (max-width: 480px) {
+	.tab_container {
+		width: 100%;
+	}
+	a.nav-link.content_link {
+		width: 100%;
+	}
+	.bottom_button_container {
+		width: 100%;
+	}
+}
