@@ -242,6 +242,26 @@
             });
           }
 
+          function handleReset() {
+            const selectedAssets = document.querySelectorAll(".asset.selected");
+            selectedAssets.forEach((asset) => {
+              asset.classList.remove("selected");
+            })
+            const selectedPartsElms = document.querySelectorAll(".selected-parts");
+            selectedPartsElms.forEach((elm) => {
+              elm.innerHTML = "";
+            })
+            const context = canvas.getContext("2d");
+            context.clearRect(0, 0, canvas.width, canvas.height);
+          }
+
+          function handleDownload() {
+            const assetLink = document.createElement("a");
+            assetLink.href = canvas.toDataURL("image/png");
+            assetLink.download = "character.png";
+            assetLink.click();
+          }
+
           const image群 = [];
 
           素材群.forEach((素材s, index) => {
@@ -294,6 +314,15 @@
               })
             })
           })
+
+          document.querySelector(".reset_button").addEventListener("click", () => {
+            handleReset();
+          })
+          
+          document.querySelector(".download_button").addEventListener("click", () => {
+            handleDownload();
+          })
+
         </script>
         <!-- Bootstrap用JavaScript -->
         <script
