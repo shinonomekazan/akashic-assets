@@ -19,7 +19,7 @@ body {
 .guide_button {
 	height: 30px;
 	width: 30px;
-	background-image: url(../img/hatena.png);
+	background-image: url(./img/hatena.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -32,7 +32,7 @@ body {
 	border: none;
 }
 .btn-close.button_close {
-	background-image: url(../img/close.png);
+	background-image: url(./img/close.png);
 	background-repeat: no-repeat;
 	width: 32px;
 	height: 32px;
@@ -43,7 +43,7 @@ body {
 .canvas_container {
 	display: block;
 	margin: 0 auto;
-	background-image: url(../img/canvas.png);
+	background-image: url(./img/canvas.png);
 	background-size: cover;
 }
 
@@ -82,7 +82,7 @@ a.nav-link.content_link {
 	color: white;
 	border-bottom: solid 1px #fff;
 	background-color: #1d1d1d;
-	background-image: url(../img/tab_frame.png);
+	background-image: url(./img/tab_frame.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 140px;
@@ -91,7 +91,7 @@ a.nav-link.content_link {
 }
 a.nav-link.content_link.active {
 	color: black;
-	background-image: url(../img/tab_frame_active.png);
+	background-image: url(./img/tab_frame_active.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-color: transparent;
@@ -100,7 +100,7 @@ a.nav-link.content_link.active {
 a.nav-link.content_link:hover {
 	color: #8bfa1a;
 	border: none;
-	background-image: url(../img/tab_frame_hover.png);
+	background-image: url(./img/tab_frame_hover.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -108,7 +108,7 @@ a.nav-link.content_link.body::before {
 	content: "";
 	height: 23px;
 	width: 20px;
-	background-image: url(../img/body.png);
+	background-image: url(./img/body.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	display: inline-block;
@@ -120,7 +120,7 @@ a.nav-link.content_link.face::before {
 	content: "";
 	height: 22px;
 	width: 22px;
-	background-image: url(../img/face.png);
+	background-image: url(./img/face.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	display: inline-block;
@@ -132,7 +132,7 @@ a.nav-link.content_link.face::before {
 	content: "";
 	height: 22px;
 	width: 22px;
-	background-image: url(../img/face.png);
+	background-image: url(./img/face.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	display: inline-block;
@@ -144,7 +144,7 @@ a.nav-link.content_link.face::before {
 	content: "";
 	height: 22px;
 	width: 22px;
-	background-image: url(../img/face.png);
+	background-image: url(./img/face.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	display: inline-block;
@@ -156,7 +156,7 @@ a.nav-link.content_link.hat::before {
 	content: "";
 	height: 10px;
 	width: 22px;
-	background-image: url(../img/hat.png);
+	background-image: url(./img/hat.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	display: inline-block;
@@ -253,13 +253,13 @@ a.nav-link.content_link.hat::before {
 	background-color: #1d1d1d;
 	display: block;
 	margin: 0 auto;
-	background-image: url(../img/button01.png);
+	background-image: url(./img/button01.png);
 	background-size: cover;
 }
 .preview_button:hover,
 .download_button:hover {
 	color: #1d1d1d;
-	background-image: url(../img/button03.png);
+	background-image: url(./img/button03.png);
 }
 .bottom_button_container {
 	text-align: center;
@@ -271,21 +271,21 @@ a.nav-link.content_link.hat::before {
 	height: 40px;
 	color: #1d1d1d;
 	border: none;
-	background-image: url(../img/button02.png);
+	background-image: url(./img/button02.png);
 	background-size: cover;
 	background-color: #1d1d1d;
 	display: inline-block;
 }
 .reset_button:hover {
 	color: #f0bf19;
-	background-image: url(../img/button04.png);
+	background-image: url(./img/button04.png);
 }
 .download_button {
 	width: 160px;
 	height: 40px;
 	color: #fff;
 	border: none;
-	background-image: url(../img/button01.png);
+	background-image: url(./img/button01.png);
 	background-size: cover;
 	background-color: #1d1d1d;
 	display: inline-block;
