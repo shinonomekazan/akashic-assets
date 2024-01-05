@@ -1,0 +1,233 @@
+{
+	"width": 1500,
+	"height": 2000,
+	"fps": 30,
+	"main": "./script/main.js",
+	"assets": {
+		"main": {
+			"type": "script",
+			"path": "script/main.js",
+			"global": true
+		},
+		"explosion": {
+			"type": "image",
+			"width": 800,
+			"height": 200,
+			"path": "image/explosion.png"
+		},
+		"btn10off": {
+			"type": "image",
+			"path": "image/btn10off.png",
+			"width": 300,
+			"height": 100
+		},
+		"btn10on": {
+			"type": "image",
+			"path": "image/btn10on.png",
+			"width": 300,
+			"height": 100
+		},
+		"btn11off": {
+			"type": "image",
+			"path": "image/btn11off.png",
+			"width": 300,
+			"height": 100
+		},
+		"btn11on": {
+			"type": "image",
+			"path": "image/btn11on.png",
+			"width": 300,
+			"height": 100
+		},
+		"btn12off": {
+			"type": "image",
+			"path": "image/btn12off.png",
+			"width": 300,
+			"height": 100
+		},
+		"btn12on": {
+			"type": "image",
+			"path": "image/btn12on.png",
+			"width": 300,
+			"height": 100
+		},
+		"btn13off": {
+			"type": "image",
+			"path": "image/btn13off.png",
+			"width": 300,
+			"height": 107
+		},
+		"btn13on": {
+			"type": "image",
+			"path": "image/btn13on.png",
+			"width": 300,
+			"height": 107
+		},
+		"btn14off": {
+			"type": "image",
+			"path": "image/btn14off.png",
+			"width": 300,
+			"height": 107
+		},
+		"btn14on": {
+			"type": "image",
+			"path": "image/btn14on.png",
+			"width": 300,
+			"height": 107
+		},
+		"btn15off": {
+			"type": "image",
+			"path": "image/btn15off.png",
+			"width": 300,
+			"height": 107
+		},
+		"btn15on": {
+			"type": "image",
+			"path": "image/btn15on.png",
+			"width": 300,
+			"height": 107
+		},
+		"btn1off": {
+			"type": "image",
+			"path": "image/btn1off.png",
+			"width": 308,
+			"height": 79
+		},
+		"btn1on": {
+			"type": "image",
+			"path": "image/btn1on.png",
+			"width": 308,
+			"height": 79
+		},
+		"btn2off": {
+			"type": "image",
+			"path": "image/btn2off.png",
+			"width": 308,
+			"height": 79
+		},
+		"btn2on": {
+			"type": "image",
+			"path": "image/btn2on.png",
+			"width": 308,
+			"height": 79
+		},
+		"btn3off": {
+			"type": "image",
+			"path": "image/btn3off.png",
+			"width": 308,
+			"height": 79
+		},
+		"btn3on": {
+			"type": "image",
+			"path": "image/btn3on.png",
+			"width": 308,
+			"height": 79
+		},
+		"btn4off": {
+			"type": "image",
+			"path": "image/btn4off.png",
+			"width": 302,
+			"height": 72
+		},
+		"btn4on": {
+			"type": "image",
+			"path": "image/btn4on.png",
+			"width": 302,
+			"height": 72
+		},
+		"btn5off": {
+			"type": "image",
+			"path": "image/btn5off.png",
+			"width": 302,
+			"height": 72
+		},
+		"btn5on": {
+			"type": "image",
+			"path": "image/btn5on.png",
+			"width": 302,
+			"height": 72
+		},
+		"btn6off": {
+			"type": "image",
+			"path": "image/btn6off.png",
+			"width": 302,
+			"height": 72
+		},
+		"btn6on": {
+			"type": "image",
+			"path": "image/btn6on.png",
+			"width": 302,
+			"height": 72
+		},
+		"btn7off": {
+			"type": "image",
+			"path": "image/btn7off.png",
+			"width": 302,
+			"height": 76
+		},
+		"btn7on": {
+			"type": "image",
+			"path": "image/btn7on.png",
+			"width": 302,
+			"height": 76
+		},
+		"btn8off": {
+			"type": "image",
+			"path": "image/btn8off.png",
+			"width": 302,
+			"height": 76
+		},
+		"btn8on": {
+			"type": "image",
+			"path": "image/btn8on.png",
+			"width": 302,
+			"height": 76
+		},
+		"btn9off": {
+			"type": "image",
+			"path": "image/btn9off.png",
+			"width": 302,
+			"height": 76
+		},
+		"btn9on": {
+			"type": "image",
+			"path": "image/btn9on.png",
+			"width": 302,
+			"height": 76
+		},
+		"btngray2": {
+			"type": "image",
+			"path": "image/btngray2.png",
+			"width": 302,
+			"height": 72
+		},
+		"btngray3": {
+			"type": "image",
+			"path": "image/btngray3.png",
+			"width": 302,
+			"height": 76
+		},
+		"btngray4": {
+			"type": "image",
+			"path": "image/btngray4.png",
+			"width": 300,
+			"height": 100
+		},
+		"btngray5": {
+			"type": "image",
+			"path": "image/btngray5.png",
+			"width": 300,
+			"height": 107
+		},
+		"btngray1": {
+			"type": "image",
+			"path": "image/btngray1.png",
+			"width": 308,
+			"height": 79
+		}
+	},
+	"moduleMainScripts": {},
+	"environment": {
+		"sandbox-runtime": "3"
+	}
+}
