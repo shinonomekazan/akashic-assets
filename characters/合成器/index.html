@@ -56,12 +56,11 @@
     </header>
 
       <!--canvas-->
-      <div>
+      <div class="canvas_container">
         <canvas
           id="canvas"
-          class="canvas_container"
-          width="160"
-          height="160"
+          width="96"
+          height="128"
         ></canvas>
       </div>
       <div class="mt-2"></div>
@@ -337,6 +336,12 @@
           
           document.querySelector(".download_button").addEventListener("click", () => {
             handleDownload();
+          })
+
+          document.querySelector(".preview_button").addEventListener("click", () => {
+            const dataURL = canvas.toDataURL();
+            localStorage.setItem("dataURL", dataURL);
+            window.open('./preview.html', '', 'width=300, height=300');
           })
 
         </script>

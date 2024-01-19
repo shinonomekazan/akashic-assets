@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <canvas width="128" height="128"></canvas>
+
+  <script>
+    const src = localStorage.getItem("dataURL");
+    const previewImg = new Image();
+    previewImg.src = src;
+
+    const canvas = document.querySelector("canvas");
+    const context = canvas.getContext("2d");
+    
+    previewImg.onload = function() {
+      context.drawImage(previewImg, 32, 64, 32, 32, 0, 0, 128, 128);
+    }
+
+    document.addEventListener(`keydown`, e => {
+      context.clearRect(0, 0, canvas.width, canvas.height);
+      if (e.code == `KeyW` || e.code == `ArrowUp`) {
+        context.drawImage(previewImg, 32, 0, 32, 32, 0, 0, 128, 128);
+      } else if (e.code == `KeyS` || e.code == `ArrowDown`) {
+        context.drawImage(previewImg, 32, 64, 32, 32, 0, 0, 128, 128);
+      } else if (e.code == `KeyA` || e.code == `ArrowLeft`) {
+        context.drawImage(previewImg, 32, 96, 32, 32, 0, 0, 128, 128);
+      } else if (e.code == `KeyD` || e.code == `ArrowRight`) {
+        context.drawImage(previewImg, 32, 32, 32, 32, 0, 0, 128, 128);
+      }
+    });
+  </script>
+</body>
+</html>
