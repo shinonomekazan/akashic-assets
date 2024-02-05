@@ -56,12 +56,17 @@
     </header>
 
       <!--canvas-->
-      <div>
+      <div class="canvas_container">
         <canvas
           id="canvas"
-          class="canvas_container"
-          width="160"
-          height="160"
+          width="96"
+          height="128"
+        ></canvas>
+        <canvas
+          id="dlCanvas"
+          class="d-none"
+          width="96"
+          height="128"
         ></canvas>
       </div>
       <div class="mt-2"></div>
@@ -234,6 +239,7 @@
             ]
           );
           const canvas = document.querySelector("canvas");
+          const dlCanvas = document.querySelector("#dlCanvas");
           function handleChange() {
             const assetsContainers = document.querySelectorAll(".tab-pane");
             const indexes = [];
@@ -248,13 +254,17 @@
               }
             })
             const context = canvas.getContext("2d");
+            const dlContext = dlCanvas.getContext("2d");
             context.clearRect(0, 0, canvas.width, canvas.height);
             indexes.forEach((imageIndex, groupIndex) => {
               if (imageIndex < 0) return;
               const assetImage = image群[groupIndex][imageIndex];
-              const dx = (canvas.width / 2) - (image群[groupIndex][imageIndex].width / 2);
-              const dy = (canvas.height / 2) - (image群[groupIndex][imageIndex].height / 2);
-              context.drawImage(image群[groupIndex][imageIndex], dx, dy);
+              const dWidth = 90;
+              const dHeight = 90;
+              const dx = (canvas.width - dWidth) / 2;
+              const dy = (canvas.height - dHeight) / 2;    
+              context.drawImage(image群[groupIndex][imageIndex], 32, 64, 32, 32, dx, dy, dWidth, dHeight);
+              dlContext.drawImage(image群[groupIndex][imageIndex], 0, 0);
             });
           }
 
@@ -273,7 +283,7 @@
 
           function handleDownload() {
             const assetLink = document.createElement("a");
-            assetLink.href = canvas.toDataURL("image/png");
+            assetLink.href = dlCanvas.toDataURL("image/png");
             assetLink.download = "character.png";
             assetLink.click();
           }
