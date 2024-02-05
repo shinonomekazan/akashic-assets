@@ -41,7 +41,11 @@ body {
 }
 /*canvas*/
 .canvas_container {
-	display: block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 160px;
+	height: 160px;
 	margin: 0 auto;
 	background-image: url(./img/canvas.png);
 	background-size: cover;
