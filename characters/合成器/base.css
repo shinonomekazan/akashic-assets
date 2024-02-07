@@ -202,7 +202,7 @@ a.nav-link.content_link.hat::before {
 	width: calc(100% / 8);
 	height: 100px;
 	margin-bottom: 10px;
-	color: #fff; 
+	color: #fff;
 	cursor: pointer;
 }
 
@@ -211,8 +211,8 @@ a.nav-link.content_link.hat::before {
 	color: #1d1d1d;
 }
 
-.asset-content img, 
-.selected-parts img	{
+.asset-content img,
+.selected-parts img {
 	width: 35px;
 	height: 35px;
 	object-fit: none;
@@ -226,12 +226,11 @@ a.nav-link.content_link.hat::before {
 #content1 .asset-content img,
 #selected1 img {
 	object-position: 50% 65%;
-	scale: 2.0;
+	scale: 2;
 }
 #content2 .asset-content img,
 #selected2 img {
 	object-position: 50% 63%;
-
 }
 #content3 .asset-content img,
 #selected3 img {

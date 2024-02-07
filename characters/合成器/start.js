@@ -1,11 +1,11 @@
-const fastify = require('fastify')({logger: true})
-const path = require('node:path')
+const fastify = require("fastify")({ logger: true });
+const path = require("node:path");
 
-fastify.register(require('@fastify/static'), {
-  root: path.join(__dirname),
-  prefix: "/",
+fastify.register(require("@fastify/static"), {
+	root: path.join(__dirname),
+	prefix: "/",
 });
 
 fastify.listen({ port: 3000 }, (err, address) => {
-	if (err) throw err
-})
+	if (err) throw err;
+});
