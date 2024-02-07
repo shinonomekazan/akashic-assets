@@ -288,11 +288,18 @@
 								}
 							});
 							const context = backCanvas.getContext("2d");
+							const dlContext = dlCanvas.getContext("2d");
 							context.clearRect(
 								0,
 								0,
 								backCanvas.width,
 								backCanvas.height,
+							);
+							dlContext.clearRect(
+								0,
+								0,
+								dlCanvas.width,
+								dlCanvas.height,
 							);
 							indexes.forEach((imageIndex, groupIndex) => {
 								if (imageIndex < 0) return;
@@ -309,27 +316,20 @@
 									backCanvas.width,
 									backCanvas.height,
 								);
+								dlContext.drawImage(image群[groupIndex][imageIndex], 0, 0);
 							});
-							const dlContext = dlCanvas.getContext("2d");
 							const frontContext = canvas.getContext("2d");
 							frontContext.imageSmoothingEnabled = false;
 							const dWidth = 96;
 							const dHeight = 96;
 							const dx = (canvas.width - dWidth) / 2;
 							const dy = (canvas.height - dHeight) / 2;
-							dlContext.clearRect(
-								0,
-								0,
-								dlCanvas.width,
-								dlCanvas.height,
-							);
 							frontContext.clearRect(
 								0,
 								0,
 								canvas.width,
 								canvas.height,
 							);
-							dlContext.drawImage(backCanvas, 0, 0);
 							frontContext.drawImage(
 								backCanvas,
 								dx,
