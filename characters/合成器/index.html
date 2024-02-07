@@ -58,6 +58,12 @@
       <!--canvas-->
       <div class="canvas_container">
         <canvas
+          id="backCanvas"
+          width="32"
+          height="32"
+          class="d-none"
+        ></canvas>
+        <canvas
           id="canvas"
           width="96"
           height="128"
@@ -238,7 +244,8 @@
               "./帽子/帽子4_魔法使い.png",
             ]
           );
-          const canvas = document.querySelector("canvas");
+          const backCanvas = document.querySelector("#backCanvas");
+          const canvas = document.querySelector("#canvas");
           const dlCanvas = document.querySelector("#dlCanvas");
           function handleChange() {
             const assetsContainers = document.querySelectorAll(".tab-pane");
@@ -253,19 +260,24 @@
                 indexes.push(selectedIndex);
               }
             })
-            const context = canvas.getContext("2d");
-            const dlContext = dlCanvas.getContext("2d");
-            context.clearRect(0, 0, canvas.width, canvas.height);
+            const context = backCanvas.getContext("2d");
+            context.clearRect(0, 0, backCanvas.width, backCanvas.height);
             indexes.forEach((imageIndex, groupIndex) => {
               if (imageIndex < 0) return;
               const assetImage = image群[groupIndex][imageIndex];
-              const dWidth = 90;
-              const dHeight = 90;
-              const dx = (canvas.width - dWidth) / 2;
-              const dy = (canvas.height - dHeight) / 2;    
-              context.drawImage(image群[groupIndex][imageIndex], 32, 64, 32, 32, dx, dy, dWidth, dHeight);
-              dlContext.drawImage(image群[groupIndex][imageIndex], 0, 0);
+              context.drawImage(image群[groupIndex][imageIndex], 32, 64, 32, 32, 0, 0, backCanvas.width, backCanvas.height);
             });
+            const dlContext = dlCanvas.getContext("2d");
+            const frontContext = canvas.getContext("2d");
+            frontContext.imageSmoothingEnabled = false;
+            const dWidth = 96;
+            const dHeight = 96;
+            const dx = (canvas.width - dWidth) / 2;
+            const dy = (canvas.height - dHeight) / 2;
+            dlContext.clearRect(0, 0, dlCanvas.width, dlCanvas.height);
+            frontContext.clearRect(0, 0, canvas.width, canvas.height);
+            dlContext.drawImage(backCanvas, 0, 0);
+            frontContext.drawImage(backCanvas, dx, dy, dWidth, dHeight);
           }
 
           function handleReset() {
@@ -320,12 +332,12 @@
               assetElm.addEventListener("click", (e) => {
                 const target = e.currentTarget;
                 const assets = target.closest(".tab-pane").querySelectorAll(".asset");
-                
+
                 assets.forEach((asset) => {
                   asset.classList.remove("selected");
                 })
                 target.classList.add("selected");
-                
+
                 const targetImage = target.querySelector("img");
 
                 if (targetImage) {
@@ -335,7 +347,7 @@
                 } else {
                   selectedPartsElm.innerHTML = "";
                 }
-                
+
                 handleChange();
               })
             })
@@ -344,7 +356,7 @@
           document.querySelector(".reset_button").addEventListener("click", () => {
             handleReset();
           })
-          
+
           document.querySelector(".download_button").addEventListener("click", () => {
             handleDownload();
           })
