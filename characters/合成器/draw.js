@@ -197,10 +197,10 @@
 			if (素材 !== "-") {
 				const partsName = 素材.split("/")[1];
 				assetElm.innerHTML = `
-	<div class="asset-content">
+<div class="asset-content">
 	<img src="${素材}" alt="${partsName}${index}">
 	<p>${partsName}${index}</p>
-	</div>`;
+</div>`;
 				const image = new Image();
 				image.src = 素材;
 				images.push(image);
