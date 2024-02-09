@@ -259,7 +259,7 @@ a.nav-link.content_link.hat::before {
 	background-image: url(./img/button01.png);
 	background-size: cover;
 }
-.preview_button:hover,
+.preview_button.active,
 .download_button:hover {
 	color: #1d1d1d;
 	background-image: url(./img/button03.png);
