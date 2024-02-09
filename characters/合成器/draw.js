@@ -89,18 +89,77 @@
 			"./帽子/帽子4_魔法使い.png",
 		],
 	);
+
+	class Animator {
+		constructor(activateElement, assetImages, drawer) {
+			this.activateElement = activateElement;
+			this.frameIndexes = [0, 1, 2, 1];
+			this.interval = 200;
+			this.timerIdentifier = undefined;
+			this.assetImages = assetImages;
+			this.drawer = drawer;
+			this.chipIndex = 2;
+			this.frame = 1;
+			this.frameIndexes = [0, 1, 2, 1];
+			this.age = 0;
+		}
+
+		get isAnimation() {
+			return this.activateElement.classList.contains("active");
+		}
+
+		get frameIndex() {
+			return this.frameIndexes[this.frame];
+		}
+
+		onAnimation() {
+			if (this.isAnimation === false) {
+				return;
+			}
+			this.frame = (this.frame + 1) % this.frameIndexes.length;
+			if (++this.age % 8 === 0) {
+				this.chipIndex = (this.chipIndex + 1) % 4;
+				this.frame = 0;
+			}
+			this.drawer(this);
+		}
+
+		changeChipset(assetImages) {
+			this.assetImages = assetImages;
+		}
+
+		start() {
+			if (this.timerIdentifier != null) {
+				this.stop();
+			}
+			this.timerIdentifier = window.setInterval(
+				this.onAnimation.bind(this),
+				this.interval,
+			);
+		}
+
+		stop() {
+			if (this.timerIdentifier == null) {
+				return;
+			}
+			window.clearInterval(this.timerIdentifier);
+			this.timerIdentifier = undefined;
+		}
+	}
+
 	const backCanvas = document.querySelector("#backCanvas");
 	const canvas = document.querySelector("#canvas");
 	const dlCanvas = document.querySelector("#dlCanvas");
 
-	function drawToBackCanvas(assetImages) {
+	function drawToBackCanvas(animator) {
 		const context = backCanvas.getContext("2d");
 		context.clearRect(0, 0, backCanvas.width, backCanvas.height);
-		assetImages.forEach((assetImage) => {
+		animator.assetImages.forEach((assetImage) => {
 			context.drawImage(
 				assetImage,
-				32,
-				64,
+				// 正面
+				animator.frameIndex * 32,
+				animator.chipIndex * 32,
 				32,
 				32,
 				0,
@@ -122,42 +181,46 @@
 		frontContext.drawImage(backCanvas, dx, dy, dWidth, dHeight);
 	}
 
-	function drawToDownloadCanvas(assetImages) {
+	function drawToDownloadCanvas(animator) {
 		const dlContext = dlCanvas.getContext("2d");
 		dlContext.clearRect(0, 0, dlCanvas.width, dlCanvas.height);
-		assetImages.forEach((assetImage) => {
+		animator.assetImages.forEach((assetImage) => {
 			dlContext.drawImage(assetImage, 0, 0);
 		});
 	}
 
-	function draw(assetImages) {
-		drawToBackCanvas(assetImages);
+	function draw(animator, refreshDownload) {
+		drawToBackCanvas(animator);
 		drawToFrontCanvas();
-		drawToDownloadCanvas(assetImages);
+		if (refreshDownload) {
+			drawToDownloadCanvas(animator);
+		}
 	}
 
-	function handleChange() {
-		const assetsContainers = document.querySelectorAll(".tab-pane");
+	function createAssetImages() {
 		const indexes = [];
+		const assetsContainers = document.querySelectorAll(".tab-pane");
 		assetsContainers.forEach((container, i) => {
 			let selected = Array.from(container.children).find((asset) =>
 				asset.classList.contains("selected"),
 			);
 			if (!selected) {
-				const selectedIndex = -1;
-				indexes.push(selectedIndex);
-			} else {
-				const selectedIndex = parseInt(selected.id) - 1;
-				indexes.push(selectedIndex);
+				return;
 			}
+			const selectedIndex = parseInt(selected.id) - 1;
+			if (selectedIndex < 0) {
+				return;
+			}
+			indexes.push(selectedIndex);
 		});
-		draw(
-			indexes
-				.filter((imageIndex) => imageIndex >= 0)
-				.map(
-					(imageIndex, groupIndex) => image群[groupIndex][imageIndex],
-				),
+		return indexes.map(
+			(imageIndex, groupIndex) => image群[groupIndex][imageIndex],
 		);
+	}
+
+	function handleChange() {
+		animator.changeChipset(createAssetImages());
+		draw(animator, true);
 	}
 
 	function handleReset() {
@@ -242,4 +305,16 @@
 	document.querySelector(".download_button").addEventListener("click", () => {
 		handleDownload();
 	});
+
+	const previewButton = document.querySelector("#previewButton");
+	previewButton.addEventListener("click", () => {
+		if (previewButton.classList.contains("active")) {
+			previewButton.classList.remove("active");
+		} else {
+			previewButton.classList.add("active");
+		}
+	});
+
+	const animator = new Animator(previewButton, createAssetImages(), draw);
+	animator.start();
 })();
