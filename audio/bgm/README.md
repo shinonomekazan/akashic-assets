@@ -6,13 +6,13 @@ BGM（バックグラウンドミュージック）です。ゲーム内音楽�
 
 |タイトル|m4a|ogg|備考|
 |----|----|---|---|
-|RPGエンディング|[〇](./m4a/RPGエンティンク.m4a)|[〇](./ogg/RPGエンティンク.ogg)||
-|RPGオープニング|[〇](./m4a/RPGオーフニンク.m4a)|[〇](./ogg/RPGオーフニンク.ogg)||
-|RPGバトル|[〇](./m4a/RPGハトル.m4a)|[〇](./ogg/RPGハトル.ogg)||
-|RPGフィールド|[〇](./m4a/RPGフィールト.m4a)|[〇](./ogg/RPGフィールト.ogg)||
-|RPGボス戦|[〇](./m4a/RPGホス戦.m4a)|[〇](./ogg/RPGホス戦.ogg)||
-|RPG町|[〇](./m4a/RPG町.m4a)|[〇](./ogg/RPG町.ogg)||
-|RPGダンジョン|[〇](./m4a/RPGタンション.m4a)|[〇](./ogg/RPGタンション.ogg)||
+|RPGエンディング|[〇](./m4a/RPG-ending.m4a)|[〇](./ogg/RPG-ending.ogg)||
+|RPGオープニング|[〇](./m4a/RPG-opening.m4a)|[〇](./ogg/RPG-opening.ogg)||
+|RPGバトル|[〇](./m4a/RPG-battle.m4a)|[〇](./ogg/RPG-battle.ogg)||
+|RPGフィールド|[〇](./m4a/RPG-field.m4a)|[〇](./ogg/RPG-field.ogg)||
+|RPGボス戦|[〇](./m4a/RPG-boss.m4a)|[〇](./ogg/RPG-boss.ogg)||
+|RPG町|[〇](./m4a/RPG-town.m4a)|[〇](./ogg/RPG-town.ogg)||
+|RPGダンジョン|[〇](./m4a/RPG-dungeon.m4a)|[〇](./ogg/RPG-dungeon.ogg)||
 
 ファイル名はあくまでもイメージなので、お好きな場面でご利用ください。
 
